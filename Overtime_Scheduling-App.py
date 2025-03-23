@@ -157,14 +157,28 @@ if uploaded_file:
     #                       USER INPUT PARAMETERS
     #=============================================================================
     
-    with st.sidebar:
-        st.header("⚙️ Optimization Settings")
-        Max_budget_P = st.number_input("💰 Maximum Overtime Budget:", min_value=0, value=300000, format='%d', key='budget')
-        Max_Overtime_Q = st.number_input("⏳ Maximum Overtime Hours:", min_value=0, value=1000, format='%d', key='overtime')
-        Min_allocation = st.number_input("🔽 Minimum Overtime per Employee:", min_value=0, value=50, format='%d', key='min_alloc')
-        Max_difference = st.number_input("⚖️ Max Difference Between Employees:", min_value=0, value=40, format='%d', key='max_diff')
+  #  with st.sidebar:
+  #      st.header("⚙️ Optimization Settings")
+ #       Max_budget_P = st.number_input("💰 Maximum Overtime Budget:", min_value=0, value=300000, format='%d', key='budget')
+  #      Max_Overtime_Q = st.number_input("⏳ Maximum Overtime Hours:", min_value=0, value=1000, format='%d', key='overtime')
+  #      Min_allocation = st.number_input("🔽 Minimum Overtime per Employee:", min_value=0, value=50, format='%d', key='min_alloc')
+   #     Max_difference = st.number_input("⚖️ Max Difference Between Employees:", min_value=0, value=40, format='%d', key='max_diff')
     
-    
+    #=============================================================================
+#                       USER INPUT PARAMETERS (Centered and Always Visible)
+#=============================================================================
+
+st.markdown("### ⚙️ Optimization Settings")
+
+col1, col2 = st.columns(2)
+with col1:
+    Max_budget_P = st.number_input("💰 Maximum Overtime Budget:", min_value=0, value=300000, format='%d', key='budget')
+    Min_allocation = st.number_input("🔽 Minimum Overtime per Employee:", min_value=0, value=50, format='%d', key='min_alloc')
+
+with col2:
+    Max_Overtime_Q = st.number_input("⏳ Maximum Overtime Hours:", min_value=0, value=1000, format='%d', key='overtime')
+    Max_difference = st.number_input("⚖️ Max Difference Between Employees:", min_value=0, value=40, format='%d', key='max_diff')
+
     
     #=============================================================================
     #                       OPTIMIZATION PROCESS

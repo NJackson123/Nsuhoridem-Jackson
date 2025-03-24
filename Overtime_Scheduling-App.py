@@ -81,6 +81,20 @@ st.sidebar.write("Ensure columns are labelled exactly as shown:")
 st.sidebar.markdown("- **Employee Name** (Text)\n- **Average Productivity (Parts/Hr)** (Numeric)\n- **Hourly Wage** (Numeric)")
 st.sidebar.warning("Ensure there are no empty cells in these columns.")
 
+
+st.sidebar.header("📥 Download Sample Excel File")
+st.sidebar.markdown(
+    """
+    <a href="https://github.com/NJackson123/Nsuhoridem-Jackson/blob/main/sample_employee-data.xlsx" download>
+        <button style='padding:10px 20px; font-size:16px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;'>
+            📄 Download Sample Data
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
+
+
 #=============================================================================
 #                       FILE UPLOADER DESIGN
 #=============================================================================
@@ -172,12 +186,12 @@ st.markdown("### ⚙️ Optimization Settings")
 
 col1, col2 = st.columns(2)
 with col1:
-    Max_budget_P = st.number_input("💰 Maximum Overtime Budget:", min_value=0, value=300000, format='%d', key='budget')
-    Min_allocation = st.number_input("🔽 Minimum Overtime per Employee:", min_value=0, value=50, format='%d', key='min_alloc')
+    Max_budget_P = st.number_input("💰 Maximum Overtime Budget:", min_value=0, value=3, format='%d', key='budget')
+    Min_allocation = st.number_input("🔽 Minimum Overtime per Employee:", min_value=0, value=10, format='%d', key='min_alloc')
 
 with col2:
-    Max_Overtime_Q = st.number_input("⏳ Maximum Overtime Hours:", min_value=0, value=1000, format='%d', key='overtime')
-    Max_difference = st.number_input("⚖️ Max Difference Between Employees:", min_value=0, value=40, format='%d', key='max_diff')
+    Max_Overtime_Q = st.number_input("⏳ Maximum Overtime Hours:", min_value=0, value=2, format='%d', key='overtime')
+    Max_difference = st.number_input("⚖️ Max Difference Between Employees:", min_value=0, value=2, format='%d', key='max_diff')
 
     
     #=============================================================================

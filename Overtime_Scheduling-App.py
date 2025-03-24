@@ -85,7 +85,7 @@ st.sidebar.warning("Ensure there are no empty cells in these columns.")
 st.sidebar.header("📥 Download Sample Excel File")
 st.sidebar.markdown(
     """
-    <a href="https://github.com/NJackson123/Nsuhoridem-Jackson/main/sample_employee-data.xlsx" download>
+    <a href="https://github.com/NJackson123/Nsuhoridem-Jackson/blob/9c90734e59db9ca90da4e24b1f52e52df1fc769a/sample_employee-data.xlsx" download>
         <button style='padding:10px 20px; font-size:16px; background-color:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer;'>
             📄 Download Sample Data
         </button>
